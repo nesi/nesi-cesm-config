@@ -5,7 +5,7 @@
   <machine MACH="maui">
 
     <!-- DESC: a text description of the machine, this field is current not used in code-->
-    <DESC>NeSI Maui platform, os is CNL, 40 pes/node (80 hyperthreads), batch system is Slurm</DESC>
+    <DESC>NeSI Cray XC50 Skylake, os is CNL, 40 pes/node, batch system is Slurm</DESC>
 
 	<!-- NODENAME_REGEX: a regular expression used to identify this machine
 	  it must work on compute nodes as well as login nodes, use machine option
