@@ -157,6 +157,7 @@
       <env name="OMP_STACKSIZE">256M</env>
       <env name="MPI_TYPE_DEPTH">16</env>
       <env name="MPICH_GNI_MAX_EAGER_MSG_SIZE">65536</env>
+      <env name="HDF5_USE_FILE_LOCKING">FALSE</env>
     </environment_variables>
     <!-- resource settings as defined in https://docs.python.org/2/library/resource.html -->
     <resource_limits>
