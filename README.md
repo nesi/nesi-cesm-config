@@ -1,7 +1,7 @@
 # NeSI CESM config
 
 To install these files copy them to *~/.cime/* and replace *nesi99999* with
-your NeSI project code, for example run the following:
+your NeSI project code, for example run the following (where *nesi12345* is your project code):
 
 ```sh
 mkdir -p ~/.cime
