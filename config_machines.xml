@@ -133,23 +133,23 @@
           <command name="unload">cray-parallel-netcdf</command>
       </modules>
       <modules compiler="intel">
-          <command name="load">PrgEnv-intel/6.0.5</command>
+          <command name="load">PrgEnv-intel/6.0.10</command>
           <command name="load">craype-x86-skylake</command>
       </modules>
       <modules compiler="gnu">
-          <command name="load">PrgEnv-gnu/6.0.5</command>
+          <command name="load">PrgEnv-gnu/6.0.10</command>
           <command name="load">craype-x86-skylake</command>
       </modules>
       <modules compiler="cray">
-          <command name="load">PrgEnv-cray/6.0.5</command>
+          <command name="load">PrgEnv-cray/6.0.10</command>
           <command name="load">craype-x86-skylake</command>
       </modules>
       <modules mpilib="mpi-serial">
-          <command name="load">cray-netcdf/4.6.1.3</command>
+          <command name="load">cray-netcdf/4.9.0.3</command>
       </modules>
       <modules mpilib="mpt">
-          <command name="load">cray-netcdf/4.6.1.3</command>
-          <command name="load">cray-parallel-netcdf/1.8.1.4</command>
+          <command name="load">cray-netcdf/4.9.0.3</command>
+          <command name="load">cray-parallel-netcdf/1.12.3.3</command>
       </modules>
     </module_system>
 <!-- environment variables, a blank entry will unset a variable -->
