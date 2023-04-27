@@ -8,7 +8,7 @@ mkdir -p ~/.cime
 sed 's/nesi99999/nesi12345/g' config_machines.xml > ~/.cime/config_machines.xml
 cp config_batch.xml ~/.cime/config_batch.xml
 ```
-### Troubleshoooting
+### Troubleshooting
 
 If you encounter `"err=Can't locate XML/LibXML.pm in @INC (you may need to install the XML::LibXML module)"`, install the missing perl dependency with following two commands
 
