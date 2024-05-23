@@ -1,5 +1,7 @@
 # NeSI CESM config
 
+Refer to the [NeSI CESM documentation](https://docs.nesi.org.nz/Scientific_Computing/Supported_Applications/CESM/).
+
 To install these files copy them to *~/.cime/* and replace *nesi99999* with
 your NeSI project code, for example run the following (where *nesi12345* is your project code):
 
@@ -7,6 +9,7 @@ your NeSI project code, for example run the following (where *nesi12345* is your
 mkdir -p ~/.cime
 sed 's/nesi99999/nesi12345/g' config_machines.xml > ~/.cime/config_machines.xml
 cp config_batch.xml ~/.cime/config_batch.xml
+cp config_compilers.xml ~/.cime/config_compilers.xml
 ```
 ### Troubleshooting
 
