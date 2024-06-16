@@ -1,5 +1,25 @@
 <config_batch>
 
+  <batch_system type="slurm" >
+    <batch_query per_job_arg="-j">squeue</batch_query>
+    <batch_cancel>scancel</batch_cancel>
+    <batch_directive>#SBATCH</batch_directive>
+    <jobid_pattern>(\d+)$</jobid_pattern>
+    <depend_string> --dependency=afterok:jobid</depend_string>
+    <depend_allow_string> --dependency=afterany:jobid</depend_allow_string>
+    <depend_separator>,</depend_separator>
+    <walltime_format>%H:%M:%S</walltime_format>
+    <batch_mail_flag>--mail-user</batch_mail_flag>
+    <batch_mail_type_flag>--mail-type</batch_mail_type_flag>
+    <batch_mail_type>none, all, begin, end, fail</batch_mail_type>
+    <directives>
+      <directive> --job-name={{ job_id }}</directive>
+      <directive> --output={{ job_id }}   </directive>
+      <directive> --ntasks={{ total_tasks }}</directive>
+      <directive> --cpus-per-task={{ thread_count }}</directive>
+    </directives>
+  </batch_system>
+
   <batch_system MACH="maui" type="slurm" >
     <batch_submit>sbatch</batch_submit>
     <submit_args>
@@ -7,6 +27,10 @@
       <arg flag="-p" name="$JOB_QUEUE"/>
       <arg flag="--account" name="$PROJECT"/>
     </submit_args>
+    <directives>
+      <directive> --nodes={{ num_nodes }}</directive>
+      <directive> --ntasks-per-node={{ tasks_per_node }}</directive>
+    </directives>
     <queues>
       <queue default="true" walltimemax="24:00:00">nesi_research</queue>
     </queues>
@@ -20,9 +44,8 @@
       <arg flag="--account" name="$PROJECT"/>
     </submit_args>
     <directives>
-      <directive>--ntasks={{ total_tasks }}</directive>
-      <directive>--hint=nomultithread</directive>
-      <directive>--mem-per-cpu=2G</directive>
+      <directive> --hint=nomultithread</directive>
+      <directive> --mem-per-cpu=2G</directive>
     </directives>
     <queues>
       <queue default="true" walltimemax="72:00:00">milan</queue>
