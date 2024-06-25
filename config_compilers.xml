@@ -18,4 +18,10 @@
         </SLIBS>
     </compiler>
 
+    <compiler MACH="maui" COMPILER="gnu">
+        <FFLAGS>
+            <append> -fallow-argument-mismatch -fallow-invalid-boz </append>
+        </FFLAGS>
+    </compiler>
+
 </config_compilers>
