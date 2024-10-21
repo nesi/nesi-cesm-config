@@ -22,7 +22,7 @@
     <directives>
       <directive>--ntasks={{ total_tasks }}</directive>
       <directive>--hint=nomultithread</directive>
-      <directive>--mem-per-cpu=2G</directive>
+      <directive>--mem-per-cpu=1850</directive>
     </directives>
     <queues>
       <queue default="true" walltimemax="72:00:00">milan</queue>
