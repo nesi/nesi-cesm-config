@@ -29,4 +29,22 @@
     </queues>
   </batch_system>
 
+  <batch_system MACH="hpc3" type="slurm" >
+    <batch_submit>sbatch</batch_submit>
+    <submit_args>
+      <arg flag="--time" name="$JOB_WALLCLOCK_TIME"/>
+      <arg flag="--partition" name="$JOB_QUEUE"/>
+      <arg flag="--account" name="$PROJECT"/>
+    </submit_args>
+    <directives>
+      <directive>--ntasks={{ total_tasks }}</directive>
+      <directive>--hint=nomultithread</directive>
+      <directive>--mem-per-cpu=1500</directive>
+    </directives>
+    <queues>
+      <queue default="true" walltimemax="72:00:00">genoa</queue>
+      <queue default="false" walltimemax="72:00:00">milan</queue>
+    </queues>
+  </batch_system>
+
 </config_batch>
