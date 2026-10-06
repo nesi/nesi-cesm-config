@@ -608,5 +608,4 @@
       <resource name="RLIMIT_STACK">-1</resource>
     </resource_limits>
   </machine>
-<
 </config_machines>
