@@ -5,13 +5,12 @@
   <machine MACH="mahuika">
 
     <!-- DESC: a text description of the machine, this field is current not used in code-->
-    <DESC>NeSI Cray CS400 Milan, os is RedHat, 128 pes/node, batch system is Slurm</DESC>
+    <DESC>REANNZ Mahuika cluster, os is Rocky, batch system is Slurm</DESC>
 
 	<!-- NODENAME_REGEX: a regular expression used to identify this machine
 	  it must work on compute nodes as well as login nodes, use machine option
 	  to create_test or create_newcase if this flag is not available -->
-    <NODENAME_REGEX>(mahuika01|mahuika02|wb.*|wm.*)</NODENAME_REGEX>
-
+    <NODENAME_REGEX>(login.*|c.*|cm.*|g.*|l.*)</NODENAME_REGEX>
     <!-- OS: the operating system of this machine. Passed to cppflags for
 	 compiled programs as -DVALUE  recognized are LINUX, AIX, Darwin, CNL -->
     <OS>LINUX</OS>
@@ -125,16 +124,13 @@
       <cmd_path lang="csh">module -q --force</cmd_path>
       <modules>
 	    <command name="purge"></command>
-        <command name="load">NeSI</command>
-        <command name="load">CMake/3.27.7</command>
-        <command name="load">git/2.23.3</command>
+        <command name="load">CMake/3.31.8</command>
       </modules>
       <modules compiler="gnu">
-        <command name="load">foss/2023a</command>
-        <command name="load">Perl/5.38.2-GCC-12.3.0</command>
-        <command name="load">netCDF/4.9.2-gompi-2023a</command>
-        <command name="load">netCDF-Fortran/4.6.1-gompi-2023a</command>
-        <command name="load">PnetCDF/1.13.0-gompi-2023a</command>
+        <command name="load">foss/2026</command>
+        <command name="load">Perl/5.42.1-GCC-15.2.0</command>
+        <command name="load">netCDF/4.9.3-gompi-2026</command>
+        <command name="load">netCDF-Fortran/4.6.4-gompi-2026</command>
       </modules>
       <modules compiler="intel">
         <command name="load">intel/2022a</command>
