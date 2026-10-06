@@ -124,6 +124,7 @@
       <cmd_path lang="csh">module -q --force</cmd_path>
       <modules>
 	    <command name="purge"></command>
+        <command name="load">NeSI</command>
         <command name="load">CMake/3.31.8</command>
       </modules>
       <modules compiler="gnu">
